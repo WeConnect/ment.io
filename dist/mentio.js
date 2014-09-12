@@ -852,7 +852,7 @@ angular.module('mentio')
                         (
                             mostRecentTriggerCharPos === 0 || 
                             !requireLeadingSpace ||
-                            /[\xA0\s]/g.test
+                            /[]/g.test
                             (
                                 effectiveRange.substring(
                                     mostRecentTriggerCharPos - 1, 
@@ -865,7 +865,7 @@ angular.module('mentio')
                         effectiveRange.length);
 
                     triggerChar = effectiveRange.substring(mostRecentTriggerCharPos, mostRecentTriggerCharPos+1);
-                    if (!(/[\xA0\s]/g.test(currentTriggerSnippet))) {
+                    if (!(/[]/g.test(currentTriggerSnippet))) {
                         return {
                             mentionPosition: mostRecentTriggerCharPos,
                             mentionText: currentTriggerSnippet,

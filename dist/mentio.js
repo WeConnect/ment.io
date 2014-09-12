@@ -216,7 +216,7 @@ angular.module('mentio', [])
                                 });
                             }
 
-                            if (event.which === 13 || event.which === 32) {
+                            if (event.which === 13) {
                                 event.preventDefault();
                                 activeMenuScope.selectActive();
                             }
